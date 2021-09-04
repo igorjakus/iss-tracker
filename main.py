@@ -4,7 +4,7 @@ import urllib.request
 
 
 # Setup the world map
-win_size = 800 
+win_size = 800
 screen = turtle.Screen()
 screen.setup(win_size, win_size)
 
@@ -28,7 +28,8 @@ while True:
         # Extract location of ISS
         longitude = float(data['iss_position']['longitude'])
         latitude = float(data['iss_position']['latitude'])
-        iss.setpos(longitude * (win_size / 2) / 180, latitude * (win_size / 2) / 180)
+        iss.setpos(longitude * (win_size / 2) / 180,
+                   latitude * (win_size / 2) / 180)
 
-        # Terminal output for test purposes
+        # Terminal output prints every fifth value to prevent spam
         print(longitude, latitude)
